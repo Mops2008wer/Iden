@@ -1,7 +1,7 @@
 # Iden
 System for PCP
 
-##How to install:
+## How to install:
 
 ### First you need to install Python.
 
