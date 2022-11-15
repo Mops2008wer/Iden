@@ -33,15 +33,13 @@ def metadata_build(file):
     print(file + " build successfully!")
     return file
 
-def i_print(md1, md2, bloean, style, icon):
+def i_print(md1, md3, md2, bloean, style, icon):
     metadata = _read("temp_build.def")
     metalist = metadata.split(";
 ")
-    metalist.append("print_ui=" + str(md1) + "=" + str(md2) + "=" + str(bloean) + "=" + str(style) + "=" + str(icon))
+    metalist.append("print_ui=" + str(md1) + "=" + str(md2) + "=" + str(bloean) + "=" + str(style) + "=" + str(icon) + "=" + str(md3))
     _mov("temp_build.def", ";
 ".join(metalist))
-
-def i_print2(md1, md2, md3, bloean, style, icon):
     metadata = _read("temp_build.def")
     metalist = metadata.split(";
 ")
@@ -102,6 +100,14 @@ def i_exit():
     metalist = metadata.split(";
 ")
     metalist.append("exit_app")
+    _mov("temp_build.def", ";
+".join(metalist))
+
+def i_meta(data, md):
+    metadata = _read("temp_build.def")
+    metalist = metadata.split(";
+")
+    metalist.append("metadata=" + str(data) + "=" + str(md))
     _mov("temp_build.def", ";
 ".join(metalist))
 
