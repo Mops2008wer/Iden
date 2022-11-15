@@ -1,3 +1,3 @@
 iden.metadata;
-print_ui_2=14=15=16=17=yae=13;
+print_ui=15=17=18=yae=14=16;
 exit_app
